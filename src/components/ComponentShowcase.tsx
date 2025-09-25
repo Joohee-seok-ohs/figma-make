@@ -1,3 +1,4 @@
+import React from "react";
 import { Button } from "./ui/button";
 import { Card, CardHeader, CardContent, CardDescription, CardTitle } from "./ui/card";
 import { Input } from "./ui/input";
@@ -20,7 +21,7 @@ interface ComponentShowcaseProps {
 
 const componentExamples: Record<string, { 
   description: string; 
-  examples: Array<{ title: string; component: JSX.Element; code: string }> 
+  examples: Array<{ title: string; component: React.ReactElement; code: string }> 
 }> = {
   Button: {
     description: "버튼은 사용자가 액션을 수행할 수 있게 하는 기본적인 상호작용 요소입니다.",
@@ -29,29 +30,29 @@ const componentExamples: Record<string, {
         title: "기본 버튼",
         component: (
           <div className="flex gap-2">
-            <Button variant="default">Primary</Button>
-            <Button variant="secondary">Secondary</Button>
-            <Button variant="outline">Outline</Button>
-            <Button variant="ghost">Ghost</Button>
+            <Button variant="default">오늘의집 둘러보기</Button>
+            <Button variant="secondary">찜하기</Button>
+            <Button variant="outline">장바구니</Button>
+            <Button variant="ghost">더보기</Button>
           </div>
         ),
-        code: `<Button variant="default">Primary</Button>
-<Button variant="secondary">Secondary</Button>
-<Button variant="outline">Outline</Button>
-<Button variant="ghost">Ghost</Button>`
+        code: `<Button variant="default">오늘의집 둘러보기</Button>
+<Button variant="secondary">찜하기</Button>
+<Button variant="outline">장바구니</Button>
+<Button variant="ghost">더보기</Button>`
       },
       {
         title: "크기 변형",
         component: (
           <div className="flex items-center gap-2">
-            <Button size="sm">Small</Button>
-            <Button size="default">Default</Button>
-            <Button size="lg">Large</Button>
+            <Button size="sm">좋아요</Button>
+            <Button size="default">구매하기</Button>
+            <Button size="lg">오늘의집 시작하기</Button>
           </div>
         ),
-        code: `<Button size="sm">Small</Button>
-<Button size="default">Default</Button>
-<Button size="lg">Large</Button>`
+        code: `<Button size="sm">좋아요</Button>
+<Button size="default">구매하기</Button>
+<Button size="lg">오늘의집 시작하기</Button>`
       }
     ]
   },
@@ -63,21 +64,21 @@ const componentExamples: Record<string, {
         component: (
           <Card className="w-80">
             <CardHeader>
-              <CardTitle>카드 제목</CardTitle>
-              <CardDescription>카드에 대한 설명입니다.</CardDescription>
+              <CardTitle>모던 인테리어 가구</CardTitle>
+              <CardDescription>심플하고 세련된 디자인의 가구 컬렉션</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>카드의 주요 콘텐츠가 여기에 들어갑니다.</p>
+              <p>오늘의집에서만 만날 수 있는 특별한 가구들을 확인해보세요.</p>
             </CardContent>
           </Card>
         ),
         code: `<Card>
   <CardHeader>
-    <CardTitle>카드 제목</CardTitle>
-    <CardDescription>카드에 대한 설명입니다.</CardDescription>
+    <CardTitle>모던 인테리어 가구</CardTitle>
+    <CardDescription>심플하고 세련된 디자인의 가구 컬렉션</CardDescription>
   </CardHeader>
   <CardContent>
-    <p>카드의 주요 콘텐츠가 여기에 들어갑니다.</p>
+    <p>오늘의집에서만 만날 수 있는 특별한 가구들을 확인해보세요.</p>
   </CardContent>
 </Card>`
       }
@@ -90,14 +91,14 @@ const componentExamples: Record<string, {
         title: "기본 입력 필드",
         component: (
           <div className="space-y-2 w-80">
-            <Input placeholder="이메일을 입력하세요" />
+            <Input placeholder="상품명을 검색하세요" />
             <Input type="password" placeholder="비밀번호" />
-            <Input disabled placeholder="비활성화된 입력" />
+            <Input disabled placeholder="로그인 후 이용 가능" />
           </div>
         ),
-        code: `<Input placeholder="이메일을 입력하세요" />
+        code: `<Input placeholder="상품명을 검색하세요" />
 <Input type="password" placeholder="비밀번호" />
-<Input disabled placeholder="비활성화된 입력" />`
+<Input disabled placeholder="로그인 후 이용 가능" />`
       }
     ]
   },
@@ -109,23 +110,23 @@ const componentExamples: Record<string, {
         component: (
           <Select>
             <SelectTrigger className="w-80">
-              <SelectValue placeholder="옵션을 선택하세요" />
+              <SelectValue placeholder="카테고리를 선택하세요" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="option1">옵션 1</SelectItem>
-              <SelectItem value="option2">옵션 2</SelectItem>
-              <SelectItem value="option3">옵션 3</SelectItem>
+              <SelectItem value="furniture">가구</SelectItem>
+              <SelectItem value="decoration">인테리어 소품</SelectItem>
+              <SelectItem value="lighting">조명</SelectItem>
             </SelectContent>
           </Select>
         ),
         code: `<Select>
   <SelectTrigger>
-    <SelectValue placeholder="옵션을 선택하세요" />
+    <SelectValue placeholder="카테고리를 선택하세요" />
   </SelectTrigger>
   <SelectContent>
-    <SelectItem value="option1">옵션 1</SelectItem>
-    <SelectItem value="option2">옵션 2</SelectItem>
-    <SelectItem value="option3">옵션 3</SelectItem>
+    <SelectItem value="furniture">가구</SelectItem>
+    <SelectItem value="decoration">인테리어 소품</SelectItem>
+    <SelectItem value="lighting">조명</SelectItem>
   </SelectContent>
 </Select>`
       }
@@ -138,16 +139,16 @@ const componentExamples: Record<string, {
         title: "뱃지 변형",
         component: (
           <div className="flex gap-2">
-            <Badge variant="default">Default</Badge>
-            <Badge variant="secondary">Secondary</Badge>
-            <Badge variant="destructive">Destructive</Badge>
-            <Badge variant="outline">Outline</Badge>
+            <Badge variant="default">NEW</Badge>
+            <Badge variant="secondary">인기</Badge>
+            <Badge variant="destructive">품절</Badge>
+            <Badge variant="outline">할인</Badge>
           </div>
         ),
-        code: `<Badge variant="default">Default</Badge>
-<Badge variant="secondary">Secondary</Badge>
-<Badge variant="destructive">Destructive</Badge>
-<Badge variant="outline">Outline</Badge>`
+        code: `<Badge variant="default">NEW</Badge>
+<Badge variant="secondary">인기</Badge>
+<Badge variant="destructive">품절</Badge>
+<Badge variant="outline">할인</Badge>`
       }
     ]
   },
@@ -160,16 +161,16 @@ const componentExamples: Record<string, {
           <div className="flex gap-2">
             <Avatar>
               <AvatarImage src="https://github.com/shadcn.png" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarFallback>오</AvatarFallback>
             </Avatar>
             <Avatar>
-              <AvatarFallback>JD</AvatarFallback>
+              <AvatarFallback>집</AvatarFallback>
             </Avatar>
           </div>
         ),
         code: `<Avatar>
   <AvatarImage src="profile-image.jpg" />
-  <AvatarFallback>CN</AvatarFallback>
+  <AvatarFallback>오</AvatarFallback>
 </Avatar>`
       }
     ]
@@ -183,14 +184,14 @@ const componentExamples: Record<string, {
           <Alert className="w-80">
             <AlertCircle className="h-4 w-4" />
             <AlertDescription>
-              이것은 중요한 알림 메시지입니다.
+              장바구니에 상품이 추가되었습니다.
             </AlertDescription>
           </Alert>
         ),
         code: `<Alert>
   <AlertCircle className="h-4 w-4" />
   <AlertDescription>
-    이것은 중요한 알림 메시지입니다.
+    장바구니에 상품이 추가되었습니다.
   </AlertDescription>
 </Alert>`
       }
@@ -203,12 +204,12 @@ const componentExamples: Record<string, {
         title: "기본 스위치",
         component: (
           <div className="flex items-center space-x-2">
-            <Switch id="airplane-mode" />
-            <label htmlFor="airplane-mode">비행기 모드</label>
+            <Switch id="notifications" />
+            <label htmlFor="notifications">알림 받기</label>
           </div>
         ),
-        code: `<Switch id="airplane-mode" />
-<label htmlFor="airplane-mode">비행기 모드</label>`
+        code: `<Switch id="notifications" />
+<label htmlFor="notifications">알림 받기</label>`
       }
     ]
   },
@@ -221,11 +222,11 @@ const componentExamples: Record<string, {
           <div className="space-y-2">
             <div className="flex items-center space-x-2">
               <Checkbox id="terms" />
-              <label htmlFor="terms">약관에 동의합니다</label>
+              <label htmlFor="terms">이용약관에 동의합니다</label>
             </div>
             <div className="flex items-center space-x-2">
               <Checkbox id="marketing" />
-              <label htmlFor="marketing">마케팅 정보 수신에 동의합니다</label>
+              <label htmlFor="marketing">할인 정보 수신에 동의합니다</label>
             </div>
           </div>
         ),

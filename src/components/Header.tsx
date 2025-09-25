@@ -1,6 +1,6 @@
+import React, { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Moon, Sun } from "lucide-react";
-import { useState, useEffect } from "react";
 
 interface HeaderProps {
   onHomeClick: () => void;
@@ -26,7 +26,7 @@ export function Header({ onHomeClick }: HeaderProps) {
           className="cursor-pointer hover:opacity-80 transition-opacity"
           onClick={onHomeClick}
         >
-          <h1 className="text-2xl font-semibold">Design System</h1>
+          <h1 className="text-2xl font-semibold">오늘의집 디자인 시스템</h1>
           <p className="text-sm text-muted-foreground">컴포넌트와 디자인 토큰 문서</p>
         </div>
         <Button variant="outline" size="icon" onClick={toggleTheme}>

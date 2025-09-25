@@ -1,61 +1,35 @@
-**Add your own guidelines here**
-<!--
+# 오늘의집 디자인 시스템 가이드라인
 
-System Guidelines
+## 컬러 시스템 관리
 
-Use this file to provide the AI with rules and guidelines you want it to follow.
-This template outlines a few examples of things you can add. You can add your own sections and format it to suit your needs
+### 디자인별 컬러 우선순위
+1. **피그마 디자인 컬러가 최우선**: 디자이너가 피그마에서 전달한 컬러 값이 CSS 변수보다 우선시되어야 함
+2. **CSS 변수 오버라이드**: 디자인별 컬러는 `globals.css`의 기본 컬러를 오버라이드해야 함
+3. **클래스 기반 컬러 시스템**: 디자인별 컬러는 특정 클래스로 구분하여 적용
 
-TIP: More context isn't always better. It can confuse the LLM. Try and add the most important rules you need
+### 컬러 적용 방법
 
-# General guidelines
+#### 1. 기본 컬러 (globals.css에 정의된 컬러)
+```html
+<!-- globals.css에 정의된 컬러는 기존 클래스 사용 -->
+<button class="bg-primary text-primary-foreground">기본 버튼</button>
+<div class="bg-background border-border text-foreground">기본 카드</div>
+```
 
-Any general rules you want the AI to follow.
-For example:
+#### 2. 피그마 전용 컬러 (globals.css에 없는 컬러)
+```html
+<!-- globals.css에 없는 피그마 전용 컬러만 arbitrary value 사용 -->
+<button class="bg-[#ff6b35] text-white hover:bg-[#e55a2b]">
+  피그마 전용 버튼
+</button>
 
-* Only use absolute positioning when necessary. Opt for responsive and well structured layouts that use flexbox and grid by default
-* Refactor code as you go to keep code clean
-* Keep file sizes small and put helper functions and components in their own files.
+<div class="bg-[#f8f9fa] border-[#e6e6e6] text-[#2f3438]">
+  피그마 전용 카드
+</div>
+```
 
---------------
+### 사용법
+- **기본 컬러**: `bg-primary`, `text-foreground` 등 globals.css 컬러 우선 사용
+- **피그마 전용 컬러**: globals.css에 없는 컬러만 `bg-[#ff6b35]` 형태로 사용
+- **혼합 사용**: 기본 컬러 + 피그마 전용 컬러 조합 가능
 
-# Design system guidelines
-Rules for how the AI should make generations look like your company's design system
-
-Additionally, if you select a design system to use in the prompt box, you can reference
-your design system's components, tokens, variables and components.
-For example:
-
-* Use a base font-size of 14px
-* Date formats should always be in the format “Jun 10”
-* The bottom toolbar should only ever have a maximum of 4 items
-* Never use the floating action button with the bottom toolbar
-* Chips should always come in sets of 3 or more
-* Don't use a dropdown if there are 2 or fewer options
-
-You can also create sub sections and add more specific details
-For example:
-
-
-## Button
-The Button component is a fundamental interactive element in our design system, designed to trigger actions or navigate
-users through the application. It provides visual feedback and clear affordances to enhance user experience.
-
-### Usage
-Buttons should be used for important actions that users need to take, such as form submissions, confirming choices,
-or initiating processes. They communicate interactivity and should have clear, action-oriented labels.
-
-### Variants
-* Primary Button
-  * Purpose : Used for the main action in a section or page
-  * Visual Style : Bold, filled with the primary brand color
-  * Usage : One primary button per section to guide users toward the most important action
-* Secondary Button
-  * Purpose : Used for alternative or supporting actions
-  * Visual Style : Outlined with the primary color, transparent background
-  * Usage : Can appear alongside a primary button for less important actions
-* Tertiary Button
-  * Purpose : Used for the least important actions
-  * Visual Style : Text-only with no border, using primary color
-  * Usage : For actions that should be available but not emphasized
--->

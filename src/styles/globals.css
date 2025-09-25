@@ -2,80 +2,147 @@
 
 :root {
   --font-size: 16px;
-  --background: #ffffff;
-  --foreground: oklch(0.145 0 0);
-  --card: #ffffff;
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: #030213;
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.95 0.0058 264.53);
-  --secondary-foreground: #030213;
-  --muted: #ececf0;
-  --muted-foreground: #717182;
-  --accent: #e9ebef;
-  --accent-foreground: #030213;
-  --destructive: #d4183d;
-  --destructive-foreground: #ffffff;
-  --border: rgba(0, 0, 0, 0.1);
+  
+  /* 오늘의집 타이포그래피 토큰 */
+  --font-family-primary: 'Pretendard Variable', 'Pretendard', sans-serif;
+  --font-family-mono: 'JetBrains Mono', monospace;
+  
+  /* 오늘의집 폰트 크기 토큰 */
+  --text-caption-2: 0.625rem;   /* 10px */
+  --text-caption-1: 0.6875rem;  /* 11px */
+  --text-label-2: 0.75rem;      /* 12px */
+  --text-label-1: 0.8125rem;    /* 13px */
+  --text-body-3: 0.875rem;      /* 14px */
+  --text-body-2: 0.9375rem;     /* 15px */
+  --text-body-1: 1rem;          /* 16px */
+  --text-title-3: 1.0625rem;    /* 17px */
+  --text-title-2: 1.125rem;     /* 18px */
+  --text-title-1: 1.25rem;      /* 20px */
+  --text-headline-2: 1.5rem;    /* 24px */
+  --text-headline-1: 2rem;      /* 32px */
+  
+  /* 폰트 굵기 */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* 오늘의집 줄 간격 토큰 (티셔츠 사이즈) */
+  --line-height-xs: 0.875rem;    /* 14px */
+  --line-height-sm: 1.125rem;    /* 18px */
+  --line-height-md: 1.25rem;     /* 20px */
+  --line-height-lg: 1.5rem;      /* 24px */
+  --line-height-xl: 1.75rem;     /* 28px */
+  --line-height-2xl: 2rem;       /* 32px */
+  --line-height-3xl: 2.625rem;   /* 42px */
+  
+  /* 글자 간격 */
+  --letter-spacing-default: -0.3px;
+  
+  /* 오늘의집 시맨틱 토큰 적용 - 라이트 모드 */
+  --background: #ffffff;           /* background */
+  --foreground: #2f3438;          /* foreground */
+  --card: #ffffff;                /* background */
+  --card-foreground: #2f3438;      /* foreground */
+  --popover: #ffffff;              /* background */
+  --popover-foreground: #2f3438;   /* foreground */
+  --primary: #0aa5ff;              /* foreground brand */
+  --primary-foreground: #ffffff;   /* foreground inverse */
+  --secondary: #2f3438;            /* secondary */
+  --secondary-foreground: #ffffff; /* secondary-foreground */
+  --muted: #f7f9fa;                /* background weak */
+  --muted-foreground: #838c94;     /* foreground weak */
+  --accent: #f7f9fa;               /* accent */
+  --accent-foreground: #2f3438;    /* accent-foreground */
+  --destructive: #f05656;          /* foreground critical */
+  --destructive-foreground: #ffffff; /* foreground inverse */
+  --border: #e6e6e6;               /* border */
   --input: transparent;
-  --input-background: #f3f3f5;
-  --switch-background: #cbced4;
+  --input-background: #f7f9fa;
+  --switch-background: #d1d5db;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #030213;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --ring: #0aa5ff;
+  --chart-1: #0aa5ff;
+  --chart-2: #12b667;
+  --chart-3: #bc7e02;
+  --chart-4: #f05656;
+  --chart-5: #8b5cf6;
+  --radius: 0.5rem;
+  --sidebar: #f7f9fa;
+  --sidebar-foreground: #2f3438;
+  --sidebar-primary: #0aa5ff;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f7f9fa;
+  --sidebar-accent-foreground: #2f3438;
+  --sidebar-border: #e6e6e6;
+  --sidebar-ring: #0aa5ff;
+  
+  /* 추가 오늘의집 시맨틱 토큰 - 라이트 모드 */
+  --attention: #bc7e02;                /* foreground attention */
+  --attention-foreground: #bc7e02;     /* foreground attention */
+  --success: #12b667;                  /* foreground brand o2oResponsibility */
+  --success-foreground: #12b667;       /* foreground brand o2oResponsibility */
+  --warning: #bc7e02;                   /* foreground attention */
+  --warning-foreground: #bc7e02;       /* foreground attention */
+  --info: #0aa5ff;                     /* foreground brand */
+  --info-foreground: #0aa5ff;          /* foreground brand */
+  
+  /* disabled 컬러 - 별도 정의 */
+  --disabled: #eaedef;                  /* background disabled */
+  --disabled-foreground: #c2c8cc;     /* foreground disabled */
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
+  /* 오늘의집 시맨틱 토큰 적용 - 다크 모드 */
+  --background: #0e0e0e;           /* background (다크) */
+  --foreground: #f5f5f5;          /* foreground (다크) */
+  --card: #141414;                /* background weak (다크) */
+  --card-foreground: #f5f5f5;      /* foreground (다크) */
+  --popover: #141414;              /* background weak (다크) */
+  --popover-foreground: #f5f5f5;   /* foreground (다크) */
+  --primary: #0aa5ff;              /* foreground brand (라이트/다크 동일) */
+  --primary-foreground: #0e0e0e;   /* foreground inverse (다크) */
+  --secondary: #f5f5f5;            /* secondary (다크) */
+  --secondary-foreground: #0e0e0e; /* secondary-foreground (다크) */
+  --muted: #141414;                /* background weak (다크) */
+  --muted-foreground: #7c7c7c;     /* foreground weak (다크) */
+  --accent: #141414;               /* accent (다크) */
+  --accent-foreground: #f5f5f5;    /* accent-foreground (다크) */
+  --destructive: #fd2840;          /* foreground critical (다크) */
+  --destructive-foreground: #0e0e0e; /* foreground inverse (다크) */
+  --border: #2e2e2e;               /* border (다크) */
+  --input: #262626;
+  --ring: #0aa5ff;                 /* foreground brand */
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --chart-1: #0aa5ff;              /* foreground brand */
+  --chart-2: #e6a306;              /* foreground attention (다크) */
+  --chart-3: #12b667;              /* foreground brand o2oResponsibility */
+  --chart-4: #fd2840;              /* foreground critical (다크) */
+  --chart-5: #bc7e02;              /* foreground attention */
+  --sidebar: #141414;              /* background weak (다크) */
+  --sidebar-foreground: #f5f5f5;   /* foreground (다크) */
+  --sidebar-primary: #0aa5ff;      /* foreground brand */
+  --sidebar-primary-foreground: #0e0e0e; /* foreground inverse (다크) */
+  --sidebar-accent: #2e2e2e;       /* background emphasis weak (다크) */
+  --sidebar-accent-foreground: #f5f5f5; /* foreground (다크) */
+  --sidebar-border: #2e2e2e;        /* border (다크) */
+  --sidebar-ring: #0aa5ff;         /* foreground brand */
+  
+  /* 추가 오늘의집 시맨틱 토큰 - 다크 모드 */
+  --attention: #e6a306;                /* foreground attention (다크) */
+  --attention-foreground: #e6a306;     /* foreground attention (다크) */
+  --success: #12b667;                  /* foreground brand o2oResponsibility (동일) */
+  --success-foreground: #12b667;       /* foreground brand o2oResponsibility (동일) */
+  --warning: #e6a306;                   /* foreground attention (다크) */
+  --warning-foreground: #e6a306;       /* foreground attention (다크) */
+  --info: #0aa5ff;                     /* foreground brand (동일) */
+  --info-foreground: #0aa5ff;          /* foreground brand (동일) */
+  
+  /* disabled 컬러 - 별도 정의 (다크) */
+  --disabled: #1c1c1c;                  /* background disabled (다크) */
+  --disabled-foreground: #7c7c7c;       /* foreground disabled (다크) */
 }
 
 @theme inline {
@@ -95,6 +162,16 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+  --color-attention: var(--attention);
+  --color-attention-foreground: var(--attention-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-disabled: var(--disabled);
+  --color-disabled-foreground: var(--disabled-foreground);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-input-background: var(--input-background);
@@ -133,53 +210,114 @@
  * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
  */
 @layer base {
+  /* 오늘의집 타이포그래피 시스템 적용 */
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
     h1 {
-      font-size: var(--text-2xl);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
+      font-family: var(--font-family-primary);
+      font-size: var(--text-headline-1);    /* 32px */
+      font-weight: var(--font-weight-bold);
+      line-height: var(--line-height-3xl);   /* 42px */
+      letter-spacing: var(--letter-spacing-default);
+      color: var(--foreground);
     }
 
     h2 {
-      font-size: var(--text-xl);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
+      font-family: var(--font-family-primary);
+      font-size: var(--text-headline-2);    /* 24px */
+      font-weight: var(--font-weight-semibold);
+      line-height: var(--line-height-2xl);   /* 32px */
+      letter-spacing: var(--letter-spacing-default);
+      color: var(--foreground);
     }
 
     h3 {
-      font-size: var(--text-lg);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
+      font-family: var(--font-family-primary);
+      font-size: var(--text-title-1);      /* 20px */
+      font-weight: var(--font-weight-semibold);
+      line-height: var(--line-height-xl);   /* 28px */
+      letter-spacing: var(--letter-spacing-default);
+      color: var(--foreground);
     }
 
     h4 {
-      font-size: var(--text-base);
+      font-family: var(--font-family-primary);
+      font-size: var(--text-title-2);      /* 18px */
+      font-weight: var(--font-weight-semibold);
+      line-height: var(--line-height-lg);   /* 24px */
+      letter-spacing: var(--letter-spacing-default);
+      color: var(--foreground);
+    }
+
+    h5 {
+      font-family: var(--font-family-primary);
+      font-size: var(--text-title-3);      /* 17px */
       font-weight: var(--font-weight-medium);
-      line-height: 1.5;
+      line-height: var(--line-height-lg);   /* 24px */
+      letter-spacing: var(--letter-spacing-default);
+      color: var(--foreground);
+    }
+
+    h6 {
+      font-family: var(--font-family-primary);
+      font-size: var(--text-body-1);      /* 16px */
+      font-weight: var(--font-weight-medium);
+      line-height: var(--line-height-xl);   /* 28px */
+      letter-spacing: var(--letter-spacing-default);
+      color: var(--foreground);
     }
 
     p {
-      font-size: var(--text-base);
+      font-family: var(--font-family-primary);
+      font-size: var(--text-body-1);      /* 16px */
       font-weight: var(--font-weight-normal);
-      line-height: 1.5;
+      line-height: var(--line-height-xl);   /* 28px */
+      letter-spacing: var(--letter-spacing-default);
+      color: var(--foreground);
     }
 
     label {
-      font-size: var(--text-base);
+      font-family: var(--font-family-primary);
+      font-size: var(--text-label-1);    /* 13px */
       font-weight: var(--font-weight-medium);
-      line-height: 1.5;
+      line-height: var(--line-height-sm);   /* 18px */
+      letter-spacing: var(--letter-spacing-default);
+      color: var(--foreground);
     }
 
     button {
-      font-size: var(--text-base);
+      font-family: var(--font-family-primary);
+      font-size: var(--text-body-1);    /* 16px */
       font-weight: var(--font-weight-medium);
-      line-height: 1.5;
+      line-height: var(--line-height-xl);   /* 28px */
+      letter-spacing: var(--letter-spacing-default);
+      color: var(--foreground);
     }
 
     input {
-      font-size: var(--text-base);
+      font-family: var(--font-family-primary);
+      font-size: var(--text-body-1);    /* 16px */
       font-weight: var(--font-weight-normal);
-      line-height: 1.5;
+      line-height: var(--line-height-xl);   /* 28px */
+      letter-spacing: var(--letter-spacing-default);
+      color: var(--foreground);
+    }
+
+    small {
+      font-family: var(--font-family-primary);
+      font-size: var(--text-caption-1); /* 11px */
+      font-weight: var(--font-weight-normal);
+      line-height: var(--line-height-xs);   /* 14px */
+      letter-spacing: var(--letter-spacing-default);
+      color: var(--muted-foreground);
+    }
+
+    code {
+      font-family: var(--font-family-mono);
+      font-size: var(--text-body-3);    /* 14px */
+      font-weight: var(--font-weight-normal);
+      line-height: var(--line-height-md);   /* 20px */
+      letter-spacing: var(--letter-spacing-default);
+      color: var(--foreground);
     }
   }
 }
@@ -187,3 +325,15 @@
 html {
   font-size: var(--font-size);
 }
+
+/* 추가 오늘의집 시맨틱 토큰 CSS 클래스 */
+.bg-attention { background-color: var(--attention); }
+.text-attention { color: var(--attention-foreground); }
+.bg-success { background-color: var(--success); }
+.text-success { color: var(--success-foreground); }
+.bg-warning { background-color: var(--warning); }
+.text-warning { color: var(--warning-foreground); }
+.bg-info { background-color: var(--info); }
+.text-info { color: var(--info-foreground); }
+.bg-disabled { background-color: var(--disabled); }
+.text-disabled { color: var(--disabled-foreground); }

@@ -1,3 +1,5 @@
+import React from "react";
+
 const components = [
   'Button', 'Card', 'Input', 'Select', 'Checkbox', 'Switch', 'Slider',
   'Badge', 'Avatar', 'Alert', 'Dialog', 'Tooltip', 'Tabs', 'Accordion',
@@ -12,9 +14,9 @@ export function HomePage() {
   return (
     <div className="p-6">
       <div className="max-w-4xl">
-        <h1 className="text-3xl mb-4">디자인 시스템 문서</h1>
+        <h1 className="text-3xl mb-4">오늘의집 디자인 시스템</h1>
         <p className="text-lg text-muted-foreground mb-8">
-          이 사이트에서는 프로젝트에서 사용하는 모든 UI 컴포넌트와 디자인 토큰을 확인할 수 있습니다. 
+          오늘의집에서 사용하는 모든 UI 컴포넌트와 디자인 토큰을 확인할 수 있습니다. 
           왼쪽 사이드바에서 원하는 컴포넌트나 토큰을 선택하여 상세 정보와 사용 예시를 확인하세요.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
