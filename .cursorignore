@@ -1,0 +1,9 @@
+# Cursor에서 수정하지 않을 파일들
+# index.css는 Tailwind CSS가 자동 생성하는 파일이므로 절대 수정하지 않음
+src/index.css
+
+# 기타 자동 생성 파일들
+node_modules/
+dist/
+build/
+*.log

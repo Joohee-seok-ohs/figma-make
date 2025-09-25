@@ -40,57 +40,57 @@
   --letter-spacing-default: -0.3px;
   
   /* 오늘의집 시맨틱 토큰 적용 - 라이트 모드 */
-  --background: #ffffff;           /* background */
-  --foreground: #2f3438;          /* foreground */
-  --card: #ffffff;                /* background */
-  --card-foreground: #2f3438;      /* foreground */
-  --popover: #ffffff;              /* background */
-  --popover-foreground: #2f3438;   /* foreground */
-  --primary: #0aa5ff;              /* foreground brand */
-  --primary-foreground: #ffffff;   /* foreground inverse */
-  --secondary: #2f3438;            /* secondary */
-  --secondary-foreground: #ffffff; /* secondary-foreground */
-  --muted: #f7f9fa;                /* background weak */
-  --muted-foreground: #838c94;     /* foreground weak */
-  --accent: #f7f9fa;               /* accent */
-  --accent-foreground: #2f3438;    /* accent-foreground */
-  --destructive: #f05656;          /* foreground critical */
-  --destructive-foreground: #ffffff; /* foreground inverse */
-  --border: #e6e6e6;               /* border */
-  --input: transparent;
-  --input-background: #f7f9fa;
-  --switch-background: #d1d5db;
+  --background: #ffffff;           /* bg-background, text-background | ODS: background */
+  --foreground: #2f3438;          /* text-foreground | ODS: foreground */
+  --card: #ffffff;                /* bg-card, text-card | ODS: background */
+  --card-foreground: #2f3438;      /* text-card-foreground | ODS: foreground */
+  --popover: #ffffff;              /* bg-popover, text-popover | ODS: background */
+  --popover-foreground: #2f3438;   /* text-popover-foreground | ODS: foreground */
+  --primary: #0aa5ff;              /* bg-primary, text-primary | ODS: foreground brand */
+  --primary-foreground: #ffffff;   /* text-primary-foreground | ODS: foreground inverse */
+  --secondary: #2f3438;            /* bg-secondary, text-secondary */
+  --secondary-foreground: #ffffff; /* text-secondary-foreground */
+  --muted: #f7f9fa;                /* bg-muted, text-muted | ODS: background weak */
+  --muted-foreground: #838c94;     /* text-muted-foreground | ODS: foreground weak */
+  --accent: #e5f6ff;               /* bg-accent, text-accent | ODS: background emphasis weak */
+  --accent-foreground: #0aa5ff;    /* text-accent-foreground | ODS: foreground brand */
+  --destructive: #ff4747;          /* bg-destructive, text-destructive | ODS: critical */
+  --destructive-foreground: #ffffff; /* text-destructive-foreground | ODS: foreground inverse */
+  --border: #e6e6e6;               /* border-border | ODS: border */
+  --input: transparent;            /* ODS: transparent */
+  --input-background: #f7f9fa;     /* bg-input-background | ODS: background weak */
+  --switch-background: #eaedef;    /* bg-switch-background | ODS: background disabled */
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #0aa5ff;
-  --chart-1: #0aa5ff;
-  --chart-2: #12b667;
-  --chart-3: #bc7e02;
-  --chart-4: #f05656;
+  --ring: #0aa5ff;                 /* ring-ring | ODS: foreground brand */
+  --chart-1: #0aa5ff;              /* ODS: foreground brand */
+  --chart-2: #12b667;              /* ODS: foreground brand o2oResponsibility */
+  --chart-3: #bc7e02;              /* ODS: foreground attention */
+  --chart-4: #ff4747;              /* ODS: critical */
   --chart-5: #8b5cf6;
   --radius: 0.5rem;
-  --sidebar: #f7f9fa;
-  --sidebar-foreground: #2f3438;
-  --sidebar-primary: #0aa5ff;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f7f9fa;
-  --sidebar-accent-foreground: #2f3438;
-  --sidebar-border: #e6e6e6;
-  --sidebar-ring: #0aa5ff;
+  --sidebar: #f7f9fa;              /* bg-sidebar, text-sidebar | ODS: background weak */
+  --sidebar-foreground: #2f3438;   /* text-sidebar-foreground | ODS: foreground */
+  --sidebar-primary: #0aa5ff;      /* bg-sidebar-primary, text-sidebar-primary | ODS: foreground brand */
+  --sidebar-primary-foreground: #ffffff; /* text-sidebar-primary-foreground | ODS: foreground inverse */
+  --sidebar-accent: #f7f9fa;       /* bg-sidebar-accent, text-sidebar-accent | ODS: background emphasis weak */
+  --sidebar-accent-foreground: #2f3438; /* text-sidebar-accent-foreground | ODS: foreground */
+  --sidebar-border: #e6e6e6;       /* border-sidebar | ODS: border */
+  --sidebar-ring: #0aa5ff;         /* ring-sidebar | ODS: foreground brand */
   
-  /* 추가 오늘의집 시맨틱 토큰 - 라이트 모드 */
-  --attention: #bc7e02;                /* foreground attention */
-  --attention-foreground: #bc7e02;     /* foreground attention */
-  --success: #12b667;                  /* foreground brand o2oResponsibility */
-  --success-foreground: #12b667;       /* foreground brand o2oResponsibility */
-  --warning: #bc7e02;                   /* foreground attention */
-  --warning-foreground: #bc7e02;       /* foreground attention */
-  --info: #0aa5ff;                     /* foreground brand */
-  --info-foreground: #0aa5ff;          /* foreground brand */
+  /* 추가 컬러 토큰 */
+  --attention: #bc7e02;                /* ODS: foreground attention */
+  --attention-foreground: #bc7e02;     /* ODS: foreground attention */
+  --success: #12b667;                  /* ODS: foreground brand o2oResponsibility */
+  --success-foreground: #12b667;       /* ODS: foreground brand o2oResponsibility */
+  --warning: #ff4747;                  /* ODS: critical */
+  --warning-foreground: #ff4747;       /* ODS: critical */
+  --info: #0aa5ff;                     /* ODS: foreground brand */
+  --info-foreground: #0aa5ff;          /* ODS: foreground brand */
   
-  /* disabled 컬러 - 별도 정의 */
-  --disabled: #eaedef;                  /* background disabled */
-  --disabled-foreground: #c2c8cc;     /* foreground disabled */
+  /* disabled 컬러 */
+  --disabled: #eaedef;                 /* ODS: background disabled */
+  --disabled-foreground: #c2c8cc;     /* ODS: foreground disabled */
 }
 
 .dark {
@@ -103,14 +103,14 @@
   --popover-foreground: #f5f5f5;   /* foreground (다크) */
   --primary: #0aa5ff;              /* foreground brand (라이트/다크 동일) */
   --primary-foreground: #0e0e0e;   /* foreground inverse (다크) */
-  --secondary: #f5f5f5;            /* secondary (다크) */
+  --secondary: #f5f5f5 !important;  /* secondary (다크) - 우선순위 강제 */
   --secondary-foreground: #0e0e0e; /* secondary-foreground (다크) */
   --muted: #141414;                /* background weak (다크) */
   --muted-foreground: #7c7c7c;     /* foreground weak (다크) */
-  --accent: #141414;               /* accent (다크) */
-  --accent-foreground: #f5f5f5;    /* accent-foreground (다크) */
-  --destructive: #fd2840;          /* foreground critical (다크) */
-  --destructive-foreground: #0e0e0e; /* foreground inverse (다크) */
+  --accent: #0e2b5b;               /* background emphasis weak (다크) */
+  --accent-foreground: #0aa5ff;    /* foreground brand (다크) */
+  --destructive: #fd2840;          /* ODS: critical (다크) */
+  --destructive-foreground: #0e0e0e; /* ODS: foreground inverse (다크) */
   --border: #2e2e2e;               /* border (다크) */
   --input: #262626;
   --ring: #0aa5ff;                 /* foreground brand */
@@ -119,8 +119,8 @@
   --chart-1: #0aa5ff;              /* foreground brand */
   --chart-2: #e6a306;              /* foreground attention (다크) */
   --chart-3: #12b667;              /* foreground brand o2oResponsibility */
-  --chart-4: #fd2840;              /* foreground critical (다크) */
-  --chart-5: #bc7e02;              /* foreground attention */
+  --chart-4: #fd2840;              /* ODS: critical (다크) */
+  --chart-5: #8b5cf6;
   --sidebar: #141414;              /* background weak (다크) */
   --sidebar-foreground: #f5f5f5;   /* foreground (다크) */
   --sidebar-primary: #0aa5ff;      /* foreground brand */
@@ -130,19 +130,19 @@
   --sidebar-border: #2e2e2e;        /* border (다크) */
   --sidebar-ring: #0aa5ff;         /* foreground brand */
   
-  /* 추가 오늘의집 시맨틱 토큰 - 다크 모드 */
-  --attention: #e6a306;                /* foreground attention (다크) */
-  --attention-foreground: #e6a306;     /* foreground attention (다크) */
-  --success: #12b667;                  /* foreground brand o2oResponsibility (동일) */
-  --success-foreground: #12b667;       /* foreground brand o2oResponsibility (동일) */
-  --warning: #e6a306;                   /* foreground attention (다크) */
-  --warning-foreground: #e6a306;       /* foreground attention (다크) */
-  --info: #0aa5ff;                     /* foreground brand (동일) */
-  --info-foreground: #0aa5ff;          /* foreground brand (동일) */
+  /* 추가 컬러 토큰 (다크 모드) */
+  --attention: #e6a306;                /* ODS: foreground attention (다크) */
+  --attention-foreground: #e6a306;     /* ODS: foreground attention (다크) */
+  --success: #12b667;                  /* ODS: foreground brand o2oResponsibility */
+  --success-foreground: #12b667;       /* ODS: foreground brand o2oResponsibility */
+  --warning: #fd2840;                  /* ODS: critical (다크) */
+  --warning-foreground: #fd2840;       /* ODS: critical (다크) */
+  --info: #0aa5ff;                     /* ODS: foreground brand */
+  --info-foreground: #0aa5ff;          /* ODS: foreground brand */
   
-  /* disabled 컬러 - 별도 정의 (다크) */
-  --disabled: #1c1c1c;                  /* background disabled (다크) */
-  --disabled-foreground: #7c7c7c;       /* foreground disabled (다크) */
+  /* disabled 컬러 (다크) */
+  --disabled: #1c1c1c;                 /* ODS: background disabled (다크) */
+  --disabled-foreground: #7c7c7c;     /* ODS: foreground disabled (다크) */
 }
 
 @theme inline {

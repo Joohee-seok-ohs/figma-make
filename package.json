@@ -54,6 +54,8 @@
       },
       "scripts": {
           "dev": "vite",
-          "build": "vite build"
+          "build": "vite build",
+          "check-protected-files": "echo '⚠️  index.css는 자동 생성 파일입니다. 수정하지 마세요!' && echo '스타일 수정은 src/styles/globals.css를 사용하세요.'",
+          "prebuild": "npm run check-protected-files"
       }
   }
